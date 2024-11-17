@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-Month Anniversary Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 30px;
+        }
+        .heart {
+            font-size: 40px;
+            color: #ff4b5c;
+            margin-bottom: 20px;
+        }
+        .teddies {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+        .message {
+            font-size: 22px;
+            color: #333;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .final-message {
+            font-size: 24px;
+            color: #ff4b5c;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart" id="heart">
+        ♥ ♥ ♥ ♥ ♥
+    </div>
+
+    <div class="teddies" id="teddies">
+        🧸 🧸 🧸 🧸 🧸 🧸
+    </div>
+
+    <div class="message" id="message">
+        <p>Jaan, Happy 6-Month Anniversary!</p>
+        <p>In these 6 months, we fought, laughed, and cried together,</p>
+        <p>but we also created some beautiful memories.</p>
+        <p>I'm sorry, Jaan. It was always my mistakes.</p>
+        <p>In sha Allah, ab se sab sahi hoga. 💖</p>
+        <p>Thank you for being my everything. I love you, Ruby! 🌹</p>
+    </div>
+
+    <div class="final-message hidden" id="finalMessage">
+        Happy 6-Months Anniversary, Ruby! 💖
+    </div>
+
+    <script>
+        // Initial delay and show animation
+        function showAnimation() {
+            document.getElementById('heart').classList.add('hidden');
+            setTimeout(() => {
+                document.getElementById('heart').classList.remove('hidden');
+                document.getElementById('teddies').classList.remove('hidden');
+            }, 1000);
+
+            // Show message after teddies
+            setTimeout(() => {
+                document.getElementById('message').classList.remove('hidden');
+            }, 3000);
+
+            // Show final message after everything else
+            setTimeout(() => {
+                document.getElementById('finalMessage').classList.remove('hidden');
+            }, 7000);
+        }
+
+        // Run the animation when the page loads
+        window.onload = function() {
+            showAnimation();
+        };
+    </script>
+
+</body>
+</html>
